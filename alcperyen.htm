@@ -1,0 +1,175 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0EFBECSQ40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0EFBECSQ40');
+</script>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 6.5.0.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<LINK rel="stylesheet" href="winelabelsite.css" type="text/css">
+<SCRIPT language="JavaScript">
+<!--
+ResultLen = 8;
+Precision = 500;
+
+function CalcAlc ( vol, percent )
+{
+    return ( ( vol * percent ) / 100 );
+} 
+
+function CalcAlcPerYen ( vol, percent, cost )
+{
+    return ( CalcAlc( vol, percent ) / cost );
+}
+
+function RightAlign( str, localval, strwk )
+{
+    strwk = str;
+    if ( strwk.length > ResultLen ) {
+        strwk = strwk.substr( 0, ResultLen );
+    } else {
+        for ( i = 0; i < ResultLen + 1; i++ ) {
+            strwk = ' ' + strwk;
+        }
+        strwk = strwk.substr( str.length, ResultLen );
+    }
+    return strwk;
+}
+
+function Calc1( localval, cost, vol, percent )
+{
+    cost    = document.form1.cost1.value;
+    vol     = document.form1.vol1.value;
+    percent = document.form1.percent1.value;
+    if ( cost != 0 ) {
+        document.form1.alc1.value = CalcAlc( vol, percent ); 
+        document.form1.alcperyen1.value = CalcAlcPerYen( vol, percent, cost );  
+    }
+    document.form1.alc1.value = RightAlign( document.form1.alc1.value );
+    document.form1.alcperyen1.value = RightAlign( document.form1.alcperyen1.value );
+}
+
+function Reset1()
+{
+    document.form1.cost1.value = '';
+    document.form1.vol1.value = '';
+    document.form1.percent1.value = '';
+    document.form1.alc1.value = '';
+    document.form1.alcperyen1.value = '';
+}
+
+function Calc2( localval, cost, vol, percent )
+{
+    cost    = document.form1.cost2.value;
+    vol     = document.form1.vol2.value;
+    percent = document.form1.percent2.value;
+    if ( cost != 0 ) {
+        document.form1.alc2.value = CalcAlc( vol, percent );  
+        document.form1.alcperyen2.value = CalcAlcPerYen( vol, percent, cost );  
+    }
+    document.form1.alc2.value = RightAlign( document.form1.alc2.value );
+    document.form1.alcperyen2.value = RightAlign( document.form1.alcperyen2.value );
+}
+
+function Reset2()
+{
+    document.form1.cost2.value = '';
+    document.form1.vol2.value = '';
+    document.form1.percent2.value = '';
+    document.form1.alc2.value = '';
+    document.form1.alcperyen2.value = '';
+}
+
+//-->
+</SCRIPT>
+<TITLE>１円で摂取できるアルコール量がビールより多いワインはどんなワインか？</TITLE>
+</HEAD>
+<BODY>
+<H2>１円で摂取できるアルコール量が<BR>
+ビールより多いワインは<BR>
+どんなワインか？</H2>
+<HR>
+<FORM NAME="form1" ACTION="">
+<CENTER>
+<TABLE border="1" width="90%">
+  <TBODY>
+    <TR>
+      <TD class="tablehead"><IMG src="blanc.gif" width="16" height="16" border="0" alt="filler"></TD>
+      <TD class="tablehead">価格 (\)</TD>
+      <TD class="tablehead">販売量 (ml)</TD>
+      <TD class="tablehead">度数 (%)</TD>
+      <TD class="tablehead" valign="middle" align="center" colspan="2">-</TD>
+      <TD class="tablehead">販売量中のアルコール量 (ml)</TD>
+      <TD class="tablehead">1円で購入できるアルコール量(ml/\)</TD>
+    </TR>
+    <TR>
+      <TD class="tablehead" nowrap>ビール</TD>
+      <TD align="right">230</TD>
+      <TD align="right">350</TD>
+      <TD align="right">4.5</TD>
+      <TD valign="middle" align="center" colspan="2">-</TD>
+      <TD align="right">15.75</TD>
+      <TD height="23" align="right">0.068</TD>
+    </TR>
+    <TR>
+      <TD class="tablehead" nowrap>ワイン</TD>
+      <TD align="right">1000</TD>
+      <TD align="right">750</TD>
+      <TD align="right">10</TD>
+      <TD valign="middle" align="center" colspan="2">-</TD>
+      <TD align="right">75.00</TD>
+      <TD height="23"align="right">0.075</TD>
+    </TR>
+    <TR>
+      <TD class="tablehead" nowrap>計算欄１</TD>
+      <TD valign="middle" align="right"><INPUT size="7" type="text" name="cost1" maxlength="7"></TD>
+      <TD valign="middle" align="right"><INPUT size="6" type="text" maxlength="6" name="vol1"></TD>
+      <TD valign="middle" align="right"><INPUT size="6" type="text" maxlength="6" name="percent1"></TD>
+      <TD valign="middle" align="center"><INPUT type="button" name="calc1" value="計算" onclick="Calc1()"></TD>
+      <TD valign="middle" align="center"><INPUT type="button" name="reset1" value="クリア" onclick="Reset1()"></TD>
+      <TD valign="middle" align="right"><INPUT size="8" type="text" maxlength="8" name="alc1" readonly></TD>
+      <TD valign="middle" align="right"><INPUT size="8" type="text" maxlength="8" name="alcperyen1" readonly></TD>
+    </TR>
+    <TR>
+      <TD class="tablehead" nowrap>計算欄２</TD>
+      <TD valign="middle" align="right"><INPUT size="7" type="text" name="cost2" maxlength="7"></TD>
+      <TD valign="middle" align="right"><INPUT size="6" type="text" maxlength="6" name="vol2"></TD>
+      <TD valign="middle" align="right"><INPUT size="6" type="text" maxlength="6" name="percent2"></TD>
+      <TD valign="middle" align="center"><INPUT type="button" name="calc1" value="計算" onclick="Calc2()"></TD>
+      <TD valign="middle" align="center"><INPUT type="button" name="reset2" value="クリア" onclick="Reset2()"></TD>
+      <TD valign="middle" align="right"><INPUT size="8" type="text" maxlength="8" name="alc2" readonly></TD>
+      <TD valign="middle" align="right"><INPUT size="8" type="text" maxlength="8" name="alcperyen2" readonly></TD>
+    </TR>
+    <TR>
+      <TD class="tablehead" nowrap>計算式</TD>
+      <TD align="right">A</TD>
+      <TD align="right">B</TD>
+      <TD align="right">C</TD>
+      <TD valign="middle" align="center" colspan="2">-</TD>
+      <TD align="right">D=B×C÷100</TD>
+      <TD align="right">E=D/A</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</CENTER>
+</FORM>
+<P>上の表からわかるように、1000円のワインは１円で購入できるアルコール量が多い、つまり効率良く酔っ払えるということになります。実際に、ワインの度数を10%と見積もり、フルボトル750mlを購入するものとして不等式を立ててみると、</P>
+<P align="center"><B><FONT size="+1">( 750 × 10 ÷ 100 ) ÷ A ＞ 0.068</FONT></B><BR>
+酒屋さんがかわいそうなので、A≦０ のケースは考えない。</P>
+<P>これを満たすAを計算すると、A ＜ 1102 となります。つまり1102円より安いワインは、ビール350ml缶よりも熱効率がいいことになります。アルコール度数やビールの販売価格を変えて、皆さんも計算してみてください。計算欄１、計算欄２に適当な数値を入れて計算ボタンを押すと、販売量中のアルコール量(ml)と、1円で購入できるアルコール量(ml/\)が自動的に計算されて表示されます。</P>
+<HR>
+<P>算数・数学が嫌いで「こんなの実際の生活で役に立たないからやっても無駄だ」と考えている小中学生諸君、<B>君達の考えは間違っている。</B>算数や数学は、１円で摂取できるアルコール量がビールより多いワインはどんなワインかを調べ、普段の食生活をより豊かにするためにどうしても必要なのだよ。</P>
+<HR>
+<P><A href="profile.htm"><IMG src="back.gif" width="125" height="30" border="0" alt="back"></A></P>
+</BODY>
+</HTML>
+
+
+

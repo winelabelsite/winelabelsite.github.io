@@ -1,0 +1,81 @@
+ 
+BODY{
+  /* 文字と背景 */
+  color : #333333;
+  background-color : #ffffff;
+}
+A{
+  /* リンク有り */
+  text-decoration : none;
+  font-weight : bold;
+}
+A:LINK{
+  color : #006633;
+}
+A:VISITED{
+  color : #006633;
+}
+A:ACTIVE{
+  color : #009933;
+}
+H1{
+  /* ホームページのタイトル */
+	padding-top : 5px;padding-right : 5px;padding-bottom : 5px;padding-left : 5px;
+	width: 100%;
+	border: 1px none white;
+  text-align : center;
+  font-size : x-large;
+  font-weight : bold;
+  background-color : #006633;
+  color : #ffffff;
+}
+H2{
+  /* ホームページ以外のページのタイトル */
+	padding: 2 2 2 4;
+	width: 100%;
+	border: 1px none white;
+  text-align : center;
+  font-size : x-large;
+  font-weight : bold;
+  background-color : #006633;
+  color : #ffffff;
+}
+H3{
+  /* ホームページのコンテンツの説明 */
+	padding: 2 2 2 4;
+	width: 100%;
+	border: 1px none white;
+  text-align : left;
+  font-weight : bold;
+  background-color : white;
+  color : black;
+}
+ADDRESS{
+  　/* メイルアドレス */
+  font-style : normal;
+}
+.tab1{
+  /* １段インデント */
+  margin-left : 3em;
+}
+.tab2{
+  /* リストの内容の説明 */
+  margin-left : 3em;
+}
+.tablehead{
+  background-color : #006633;
+  color : #ffffff;
+  font-weight : bold;
+}
+ADDRESS{
+  text-decoration : none;
+  font-style : normal;
+  margin-top : 1em;
+}
+.tablehilight{
+  background-color : #ffffcc;
+}
+.tablequote{
+  margin-left : 5%;
+  margin-right : 5%;
+}
