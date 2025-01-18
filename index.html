@@ -115,15 +115,23 @@
   </TBODY>
 </TABLE>
 </CENTER>
+  <div id="orientation">向きを判定中...</div>
   <script>
-	window.addEventListener("resize", () => {
-	  const orientation = screen.orientation || window.orientation;
-	  if (orientation) {
-	    // 向きに応じて適切な処理を追加
-	    // console.log("Orientation changed:", orientation);
-	  }
-	});
-  </script></BODY>
+    function updateOrientation() {
+      const orientation =
+        screen.orientation?.type.includes("portrait") || window.innerHeight > window.innerWidth
+          ? "縦向き"
+          : "横向き";
+      document.getElementById("orientation").textContent = `現在は ${orientation} です。`;
+    }
+
+    // 初期状態を設定
+    updateOrientation();
+
+    // 向きが変わったときに更新
+    window.addEventListener("resize", updateOrientation);
+  </script>
+</BODY>
 </HTML>
 
 
