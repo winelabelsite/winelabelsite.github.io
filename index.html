@@ -116,9 +116,14 @@
 </TABLE>
 </CENTER>
   <script>
-    window.addEventListener("resize", () => {
-      // 必要な処理を書く（この例では空のリスナー）
     });
+	window.addEventListener("resize", () => {
+	  const orientation = screen.orientation || window.orientation;
+	  if (orientation) {
+	    // 向きに応じて適切な処理を追加
+	    // console.log("Orientation changed:", orientation);
+	  }
+	});
   </script></BODY>
 </HTML>
 
