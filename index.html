@@ -116,6 +116,12 @@
 </TABLE>
 </CENTER>
   <div id="orientation">向きを判定中...</div>
+  <script defer>
+  if (window.navigator.userAgent.includes("FBAN") || window.navigator.userAgent.includes("FBAV")) {
+    // Facebookアプリ内ブラウザの場合、外部ブラウザにリダイレクト
+	window.location.href = "https://winelabelsite.github.io";
+  }
+  </script>
   <script>
     function updateOrientation() {
       const orientation =
