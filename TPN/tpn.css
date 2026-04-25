@@ -1,0 +1,102 @@
+/* ===============================
+   全体設定
+   =============================== */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* ===============================
+   レイアウト全体
+   =============================== */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===============================
+   左：ロゴ領域（PC基準）
+   =============================== */
+.left {
+  width: 330px; /* PCでは固定幅 */
+  display: flex;
+  align-items: flex-start; /* 上に配置 */
+  justify-content: center;
+}
+
+/* ロゴ配置 */
+.logo-box {
+  width: 100%;
+  height: 80vh; /* 高さで見せる */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0;
+}
+
+/* ロゴ画像 */
+.logo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   右：コンテンツ
+   =============================== */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #faf9f6;
+  color: #333;
+}
+
+/* 中央エリア */
+.center-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* What's New */
+.news {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   リンク
+   =============================== */
+.links {
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+/* ===============================
+   スマホ対応
+   =============================== */
+@media (max-width: 768px) {
+
+  .left {
+    width: clamp(120px, 30%, 220px);
+  }
+
+  .logo-box {
+    height: auto;
+  }
+
+}
